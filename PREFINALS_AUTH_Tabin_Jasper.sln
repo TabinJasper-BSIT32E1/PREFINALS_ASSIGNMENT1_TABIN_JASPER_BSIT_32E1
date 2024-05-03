@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PREFINALS_AUTH_Tabin_Jasper", "PREFINALS_AUTH_Tabin_Jasper\PREFINALS_AUTH_Tabin_Jasper.csproj", "{69ED2EE2-E888-455C-8724-7AD9921A2093}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69ED2EE2-E888-455C-8724-7AD9921A2093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69ED2EE2-E888-455C-8724-7AD9921A2093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69ED2EE2-E888-455C-8724-7AD9921A2093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69ED2EE2-E888-455C-8724-7AD9921A2093}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5E19D5C-4721-49D1-90BB-BCD436D9FE48}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+@PREFINALS_AUTH_Tabin_Jasper_HostAddress = http://localhost:5269
+
+GET {{PREFINALS_AUTH_Tabin_Jasper_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
