@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer", "PREFINALS_AUTH_Tabin_Jasper\AuthServer.csproj", "{69ED2EE2-E888-455C-8724-7AD9921A2093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer", "PREFINALS_AUTH_Tabin_Jasper\AuthServer.csproj", "{69ED2EE2-E888-455C-8724-7AD9921A2093}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtectedApi", "ProtectedApi\ProtectedApi.csproj", "{50E5F4FD-2B0E-4C3F-9508-B0DA1BC5E450}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProtectedApi", "ProtectedApi\ProtectedApi.csproj", "{50E5F4FD-2B0E-4C3F-9508-B0DA1BC5E450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{BF3F13D4-A8C3-4F9C-915F-AB5B5750287D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{50E5F4FD-2B0E-4C3F-9508-B0DA1BC5E450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50E5F4FD-2B0E-4C3F-9508-B0DA1BC5E450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50E5F4FD-2B0E-4C3F-9508-B0DA1BC5E450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3F13D4-A8C3-4F9C-915F-AB5B5750287D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3F13D4-A8C3-4F9C-915F-AB5B5750287D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3F13D4-A8C3-4F9C-915F-AB5B5750287D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3F13D4-A8C3-4F9C-915F-AB5B5750287D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

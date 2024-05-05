@@ -1,11 +1,11 @@
 ﻿using AuthServer.Core;
-using Microsoft.AspNetCore.Http;
+using AuthServer.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthServer.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -17,41 +17,32 @@ namespace AuthServer.Controllers
             _authService = authService;
         }
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequestModel model)
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] User user)
         {
-            // Validate credentials
-            if (!await _userService.ValidateCredentialsAsync(model.Username, model.Password))
-            {
-                return Unauthorized("Invalid username or password");
-            }
+            if (await _userService.GetUserAsync(user.Username) != null)
+                return Conflict("User already exists");
 
-            // Generate JWT token
-            var token = await _authService.GenerateJwtTokenAsync(model.Username);
+            if (await _userService.CreateUserAsync(user))
+                return Ok("User created successfully");
 
+            return BadRequest("Failed to create user");
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
+        {
+            var user = await _userService.GetUserAsync(loginRequest.Username);
+            if (user == null)
+                return NotFound("User not found");
+
+            // Replace with actual password validation logic (using a secure hashing function)
+            var isValidPassword = await _userService.ValidatePasswordAsync(user, loginRequest.Password);
+            if (!isValidPassword)
+                return Unauthorized("Invalid credentials");
+
+            var token = await _authService.GenerateJwtTokenAsync(user);
             return Ok(new { Token = token });
         }
-
-        [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterRequestModel model)
-        {
-            // Implement user registration logic here
-            // Example: Create a new user with provided details
-
-            return Ok("Registration successful");
-        }
-
-        // Add other endpoints for user management (e.g., password change, locking) as needed
-    }
-
-    public class LoginRequestModel
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-    }
-
-    public class RegisterRequestModel
-    {
-        // Add properties for user registration (e.g., username, password, email) as needed
     }
 }
