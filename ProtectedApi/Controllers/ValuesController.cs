@@ -1,42 +1,45 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 
-namespace ProtectedApi.Controllers
+namespace ProtectedApi
 {
     [ApiController]
-    [Route("api/[controller]")]
-    [Authorize] // Requires authentication for all actions in this controller
-    public class ValuesController : ControllerBase
+    [Route("[controller]")]
+    public class ValueController : ControllerBase
     {
-        [HttpGet("userinfo")]
-        public IActionResult GetUserInfo()
+        private readonly string _owner = "Jasper P. Tabin";
+        private readonly Random _random = new Random();
+        private readonly string[] _thingsAboutOwner = new[]
         {
-            // Get user information from claims
-            var username = User.Identity.Name;
+            "Studying at Lyceum of Alabang",
+            "Course:BSIT",
+            "Age:21",
+            "Blop Blop",
 
-            // Return user information
-            return Ok(new { Username = username, Section = "YourSection", Course = "YourCourse" });
+        };
+
+        [HttpGet("about/me")]
+        public IActionResult AboutMe()
+        {
+            var thing = _thingsAboutOwner[_random.Next(_thingsAboutOwner.Length)];
+            return Ok(thing);
         }
 
-        [HttpGet("funfacts")]
-        public IActionResult GetFunFacts()
+        [HttpGet("about")]
+        public IActionResult About()
         {
-            // Return fun facts about the API creator
-            string[] funFacts = {
-                "Fun fact 1",
-                "Fun fact 2",
-                "Fun fact 3",
-                "Fun fact 4",
-                "Fun fact 5",
-                "Fun fact 6",
-                "Fun fact 7",
-                "Fun fact 8",
-                "Fun fact 9",
-                "Fun fact 10"
-                // Add more fun facts here
-            };
-
-            return Ok(funFacts);
+            return Ok(_owner);
         }
+
+        [HttpPost("about")]
+        public IActionResult About([FromBody] NameModel model)
+        {
+            return Ok($"Hi {model.Name} from {_owner}");
+        }
+    }
+
+    public class NameModel
+    {
+        public string? Name { get; set; }
     }
 }
