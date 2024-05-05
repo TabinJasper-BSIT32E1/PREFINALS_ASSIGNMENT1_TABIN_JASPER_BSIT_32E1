@@ -4,10 +4,14 @@ Conceptual Understanding:
 ## Onion Architecture: (Yes/No) 
  
 # Have you heard of the Onion Architecture principle in software design?
- 
+
 <div style="border-radius: 10px; background-color: #f0f0f0; padding: 10px;">
+
 Yes, I have heared about Onion Architecture its purpose but I have no idea on implementing it properly in programming projects.
+
 </div>
+
+
  
 ## MVC Pattern: (Yes/No) 
  
