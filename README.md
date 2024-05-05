@@ -1,22 +1,17 @@
-# Self-Assessment: Onion Architecture, MVC, and Web API (.NET Core) with Bottlenecks (Encountered)
+## Self-Assessment: Onion Architecture, MVC, and Web API (.NET Core) with Bottlenecks (Encountered)
 Conceptual Understanding:
  
-## Onion Architecture: (Yes/No) 
- 
-# Have you heard of the Onion Architecture principle in software design?
+### Have you heard of the Onion Architecture principle in software design?
 
 ```
 Yes, I have heared about Onion Architecture its purpose but I have no idea on implementing it properly in programming projects.
 ```
 
-## MVC Pattern: (Yes/No) 
- 
 # Are you familiar with the Model-View-Controller (MVC) pattern for building web applications?
  
  -Yes, I have learned some of the basic of implementing it & it's purpose on small projects. But not totally comfortable with it.
  
-## Web API: (Yes/No) 
- 
+
 # Do you understand the concept of building RESTful APIs using ASP.NET Core Web API?
  
 - No, I haven't hear of ASP.NET Core Web API to build Restful APIs.
