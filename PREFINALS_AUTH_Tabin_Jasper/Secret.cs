@@ -1,8 +1,4 @@
-﻿namespace AuthServer
+﻿public static class Secret
 {
-    public class Secret
-    {
-        public string Key { get; } = "YourSecretKeyHere";
-
-    }
+    public const string Key = "YourSecretKeyHere";
 }
