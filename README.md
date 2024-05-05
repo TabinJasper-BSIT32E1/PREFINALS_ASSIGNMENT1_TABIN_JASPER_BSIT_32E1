@@ -5,7 +5,15 @@ Conceptual Understanding:
  
 # Have you heard of the Onion Architecture principle in software design?
  
-- Yes, I have heared about Onion Architecture its purpose but I have no idea on implementing it properly in programming projects.
++-------------------------+
+| Yes, I have heared      |
+| about Onion Architecture |
+| its purpose but I have   |
+| no idea on implementing  |
+| it properly in programming|
+| projects.                |
++-------------------------+
+
  
 ## MVC Pattern: (Yes/No) 
  
